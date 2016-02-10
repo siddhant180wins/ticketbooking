@@ -1,0 +1,90 @@
+<html>
+
+<head>
+
+
+<style>
+#paymentForm{
+	display:none;
+}
+#timer{
+	display: none;
+}
+.btn {
+    background-color:lightgrey;
+    color:black;
+    margin:2px;
+    padding:2px;
+    height:30px;
+    width:30px;
+} 
+
+.btnFree{
+	background-color:lightgreen;
+    color:black;
+    margin:2px;
+    padding:2px;
+    height:30px;
+    width:30px;
+
+}
+
+.btnBlock{
+	background-color:lightRed;
+    color:black;
+    margin:2px;
+    padding:2px;
+    height:30px;
+    width:30px;
+
+}
+.btn .red{
+	background: red;
+}
+.btn .green{
+	background: green;
+}
+
+</style>
+<script type="text/javascript"  src='jquery-1.11.1.min.js'></script>
+<script type="text/javascript" src="json2.js"></script>
+
+</head>
+
+<body>
+	
+	<button type="button" onclick="loadDoc()">Request data</button>
+	<div id="listOfMovies">
+	</div>
+	<!--  
+	<select name="movies" onchange="loadShowsForAMovie(this.value)">
+		<option value="">Select a Movie:</option>
+		Create select obj and add options
+	<option value="ALFKI">Alfreds Futterkiste</option>
+	<option value="NORTS ">North/South</option>
+	<option value="WOLZA">Wolski Zajazd</option>
+	</select> -->
+
+	<p id="demo"></p>
+
+	<div id="listOfShowsTimes">
+	
+	</div>
+		
+	<table id="seatsMatrix">
+	</table>
+	<div id='paymentForm'></div>
+	<div id='timer'><span id='min'></span><span id='colon'>:</span><span id='sec'></span></div>
+	<button id='back'>Back</button>
+	<button type="button" onclick="proceed(this.value)" id='proceedPayment'>Proceed to Payment</button>
+	
+	<script>
+	<!--On load find list of movies and Create select obj and add movie options-->
+	<!--On change of movie from select, get shows and list timings -->
+	<!--Get show timings and list them, onchange of show time get seats and display array of seats to select -->
+	<!--On selecting a seat update the status and lock & unlock the seat based on the timer -->
+	<!--Besides Update the state of seats in regular intervals, for availability -->	
+	</script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
